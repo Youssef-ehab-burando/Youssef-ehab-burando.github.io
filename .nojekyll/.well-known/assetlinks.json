@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.burando",
+      "sha256_cert_fingerprints": [
+       "6B:CD:BE:5E:60:EA:F0:B5:48:8B:86:1B:C0:0C:D6:7E:52:CC:D6:23:25:B3:C5:21:0D:DE:26:9C:2D:30:8E:8F"
+      ]
+    }
+  }
+]

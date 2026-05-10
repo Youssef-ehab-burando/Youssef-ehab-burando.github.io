@@ -2,15 +2,18 @@
 <html>
 <head>
   <script>
-    // بيقرأ الـ brand ID من الـ query string
+    // قراءة brandId من query string
     const params = new URLSearchParams(window.location.search);
     const brandId = params.get('brandId');
     
     if (brandId) {
+      // محاولة فتح التطبيق
       window.location.href = `burando://brand/${brandId}`;
+      
+      // إذا لم ينجح (التطبيق غير مثبت)
       setTimeout(() => {
         document.getElementById('msg').style.display = 'block';
-      }, 2000);
+      }, 2500);
     }
   </script>
 </head>

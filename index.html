@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    const path = window.location.pathname; // /brand/28
+    const segments = path.split('/').filter(Boolean);
+    
+    if (segments[0] === 'brand' && segments[1]) {
+      const brandId = segments[1];
+      window.location.href = `burando://brand/${brandId}`;
+      
+      // Fallback لو التطبيق مش موجود
+      setTimeout(() => {
+        document.getElementById('msg').style.display = 'block';
+      }, 2000);
+    }
+  </script>
+</head>
+<body>
+  <p>جاري فتح التطبيق...</p>
+  <p id="msg" style="display:none">
+    يرجى تحميل تطبيق Burando أولاً
+  </p>
+</body>
+</html>
